@@ -1,15 +1,13 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
-    <style>
-        {% block styling %}
-            body {
-                background-color: aquamarine;
-            }
-        {% endblock %}
-    </style>
+    {% block styles %}
+        {{ super() }}
+    {% endblock %}
 </head>
 <body>
     {% block content %}{% endblock %}

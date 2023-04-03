@@ -2,8 +2,10 @@ from flask import Flask, render_template
 from flask_wtf import FlaskForm
 from wtforms.fields import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Length, Email
+from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
+Bootstrap(app)
 app.secret_key = "asuhfsaa-123x2w13fd-12xi3u21890-21we2qwex123"
 
 
