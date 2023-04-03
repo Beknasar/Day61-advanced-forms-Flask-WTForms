@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 from flask_wtf import FlaskForm
-from wtforms.fields import StringField, PasswordField, EmailField
+from wtforms.fields import StringField, PasswordField, SubmitField
 
 app = Flask(__name__)
 app.secret_key = "asuhfsaa-123x2w13fd-12xi3u21890-21we2qwex123"
@@ -9,6 +9,7 @@ app.secret_key = "asuhfsaa-123x2w13fd-12xi3u21890-21we2qwex123"
 class LoginForm(FlaskForm):
     email = StringField(label="Email: ")
     password = PasswordField(label="Password: ")
+    submit = SubmitField(label="Log In")
 
 
 @app.route("/")
